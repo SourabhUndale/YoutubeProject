@@ -1,4 +1,7 @@
 import { asyncHandler } from "../utils/asyncHandler.js";
+import {User} from "../models/user.models.js"
+import {asyncHandler} from "../utils/asyncHandler.js"
+
 
 const registerUser = asyncHandler(async (req, res)=>{
     // get user details from frontend
@@ -25,7 +28,18 @@ const registerUser = asyncHandler(async (req, res)=>{
  
 })
 
+const loginUser = asyncHandler(async(req, res) =>{
+    // check user is present in db user password and username
+    // give him access token
+
+    
+})
 
 
 
-export {registerUser}
+
+export {
+    registerUser,
+    loginUser
+
+}
